@@ -3,11 +3,11 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
+- [The Exercises](#the-exercises)
 - [Exercise Goals](#exercise-goals)
 - [Materials](#materials)
 - [Exercise Structure and Restrictions](#exercise-structure-and-restrictions)
   - [Why These Restrictions](#why-these-restrictions)
-- [The Exercises](#the-exercises)
 
 ## Introduction
 
@@ -34,6 +34,15 @@ Equivalently:
 - If you don't know what code to write then your mental model isn't as clear as you think it is or you don't have sufficient knowledge of syntax (likely a combination of both).
 
 Novices focus too much on syntax and not enough on modeling. This is understandable since syntax is new, foreign, and unique to programming.  Most curriculum reinforces this by organizing everything by syntax.
+
+## The Exercises
+
+Please read the other sections before diving into these exercises.
+
+1. [Find the largest number](exercises/find-largest-number)
+1. [Find the smallest number](exercises/find-smallest-number)
+1. [Is in list](exercises/is-in-list)
+1. [Add numbers](exercises/add-numbers)
 
 ## Exercise Goals
 
@@ -89,13 +98,6 @@ For example, if you were handed a stack of index cards with numbers and asked to
 Using those heursitics, you might find a likely candidate for "largest number" and then quickly sanity check by scanning every card to see if there's a larger one.
 
 That's too smart for a computer!
-
-## The Exercises
-
-1. [Find the largest number](exercises/find-largest-number)
-1. [Find the smallest number](exercises/find-smallest-number)
-1. [Is in list](exercises/is-in-list)
-1. [Add numbers](exercises/add-numbers)
 
 [wiki-mental-model]: https://en.wikipedia.org/wiki/Mental_model
 [wiki-index-cards]: https://en.wikipedia.org/wiki/Index_card
