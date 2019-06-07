@@ -94,7 +94,8 @@ That's too smart for a computer!
 
 1. [Find the largest number][exercises/find-largest-number]
 1. [Find the smallest number][exercises/find-smallest-number]
-1.
+1. [Is in list][exercises/is-in-list]
+1. [Add numbers][exercises/add-numbers]
 
 [wiki-mental-model]: https://en.wikipedia.org/wiki/Mental_model
 [wiki-index-cards]: https://en.wikipedia.org/wiki/Index_card
