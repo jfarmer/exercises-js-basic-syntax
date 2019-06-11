@@ -43,6 +43,19 @@ Please read the other sections before diving into these exercises.
 1. [Find the smallest number](exercises/find-smallest-number)
 1. [Is in list](exercises/is-in-list)
 1. [Add numbers](exercises/add-numbers)
+1. [Find max even number](exercises/find-largest-even-number)
+1. [Find max odd number](exercises/find-largest-odd-number)
+1. [Find second-largest number](exercises/find-second-largest-number)
+1. [Count specific number](exercises/count-number)
+1. [Count positive numbers](exercises/count-positive-numbers)
+1. [Count negative numbers](exercises/count-negative-numbers)
+1. [Count larger than 10](exercises/count-larger-than-ten)
+1. [Count smaller than 10](exercises/count-smaller-than-ten)
+1. [Count larger than X](exercises/count-larger-than)
+1. [Count smaller than Y](exercises/count-smaller-than)
+1. [Count number of cards](exercises/length)
+1. [Count max](exercises/count-max)
+1. [Average](exercises/average)
 
 ## Exercise Goals
 
