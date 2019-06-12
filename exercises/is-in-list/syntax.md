@@ -24,8 +24,12 @@ function isInList(pile, searchNumber) {
 }
 
 let pile = [10, 9, -2, 100];
-isInList(pile, 9);  // => true
-isInList(pile, 14); // => false
+
+let is9InList = isInList(pile, 9);
+console.log(is9InList); // => true
+
+let is14InList = isInList(pile, 14);
+console.log(is14InList); // => false
 ```
 
 ## Ruby

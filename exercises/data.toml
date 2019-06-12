@@ -1,0 +1,495 @@
+
+[[exercises]]
+title="Find Largest Number"
+slug="find-largest-number"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+define procedure find_largest_number:
+  input: a pile of numbers, call it PILE
+
+  look at first NUMBER in pile and write it on post-it note, call it MAX_SO_FAR
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > MAX_SO_FAR, then:
+      replace MAX_SO_FAR with NUMBER on post-it note
+    end if
+  end foreach
+
+  hand back post-it note
+end define procedure
+
+let PILE be [10, 9, -2, 100, 17]
+call procedure find_largest_number with inputs: PILE // will give us 100
+'''
+
+javascript='''
+function findLargestNumber(numbers) {
+  let maxSoFar = numbers[0];
+
+  for(let number of numbers) {
+    if (number > maxSoFar) {
+      maxSoFar = number;
+    }
+  }
+
+  return maxSoFar;
+}
+
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let largestNumber = findLargestNumber(pileOfNumbers);
+
+console.log(largest_number);
+'''
+
+ruby='''
+def find_largest_number(numbers)
+  max_so_far = numbers.first
+
+  numbers.each do |number|
+    if number > max_so_far
+      max_so_far = number
+    end
+  end
+
+  return max_so_far
+end
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
+
+puts(largest_number)
+'''
+
+python='''
+def find_largest_number(numbers):
+  max_so_far = numbers[0]
+
+  for number in numbers:
+    if number > max_so_far:
+      max_so_far = number
+
+  return max_so_far
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
+
+print(largest_number)
+'''
+
+[[exercises]]
+title="Find Smallest Number"
+slug="find-smallest-number"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+function findSmallestNumber(numbers) {
+  let minSoFar = numbers[0];
+
+  for(let number of numbers) {
+    if (number < minSoFar) {
+      minSoFar = number;
+    }
+  }
+
+  return minSoFar;
+}
+
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let smallestNumber = findSmallestNumber(pileOfNumbers);
+
+console.log(smallestNumber);
+'''
+
+ruby='''
+def find_smallest_number(numbers)
+  min_so_far = numbers.first
+
+  numbers.each do |number|
+    if number < min_so_far
+      min_so_far = number
+    end
+  end
+
+  return min_so_far
+end
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
+
+puts(smallest_number)
+'''
+
+python='''
+def find_smallest_number(numbers):
+  min_so_far = numbers[0]
+
+  for number in numbers:
+    if number < min_so_far:
+      min_so_far = number
+
+  return min_so_far
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
+
+print(smallest_number)
+'''
+
+[[exercises]]
+title="Is In List"
+slug="is-in-list"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+function isInList(pile, searchNumber) {
+  for(let number of pile) {
+    if (number === searchNumber) {
+      let result = true;
+      return result;
+    }
+  }
+
+  let result = false;
+
+  return result;
+}
+
+let pile = [10, 9, -2, 100];
+isInList(pile, 9);  // => true
+isInList(pile, 14); // => false
+'''
+
+ruby='''
+def is_in_list(pile, search_number)
+  pile.each do |number|
+    if number == search_number
+      result = true
+      return result
+    end
+  end
+
+  result = false
+  return result
+end
+
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
+'''
+
+python='''
+def is_in_list(pile, search_number):
+  for number in pile:
+    if number == search_number:
+      result = True
+      return result
+
+  result = False
+  return result
+
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
+'''
+
+php='''
+function is_in_list($pile, $search_number) {
+  foreach ($pile as $search_number) {
+    if ($number == $search_number) {
+      $result = TRUE;
+      return $result;
+    }
+  }
+
+  $result = FALSE
+  return $result
+}
+
+$pile = [10, 9, -2, 100]
+is_in_list($pile, 9)  # => true
+is_in_list($pile, 14) # => false
+'''
+
+[[exercises]]
+title="Find Largest Even Number"
+slug="find-largest-even-number"
+short_description='''
+Given a list of numbers, let's invent a process to find the largest even number from a list of numbers. A number is even if it is divisible by 2: -14, 0, 18, 22, 144 are all even.
+'''
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+define procedure find_largest_even_number:
+  input: a pile of numbers, call it PILE
+
+  pull out a blank sticky note, call it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER is even, then:
+      if NUMBER
+    end if
+    if NUMBER > MAX_SO_FAR and NUMBER is even, then:
+      replace MAX_SO_FAR with NUMBER on post-it note
+    end if
+  end foreach
+
+  hand back post-it note
+end define procedure
+
+let PILE be [10, 9, -2, 18, 101, 17]
+call procedure find_largest_even_number with inputs: PILE // will give us 18
+
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Find max odd number"
+slug="find-largest-odd-number"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Find second-largest number"
+slug="find-second-largest-number"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count specific number"
+slug="count-number"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count positive numbers"
+slug="count-positive-numbers"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count negative numbers"
+slug="count-negative-numbers"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count larger than 10"
+slug="count-larger-than-ten"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count smaller than 10"
+slug="count-smaller-than-10"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count larger than X"
+slug="count-larger-than"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count smaller than Y"
+slug="count-smaller-than"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count number of cards"
+slug="length"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Count max"
+slug="count-max"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Add numbers"
+slug="add-numbers"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
+
+[[exercises]]
+title="Average of numbers"
+slug="average"
+short_description=""
+friend_prompt=""
+  [[exercises.arguments]]
+pseudocode='''
+'''
+
+javascript='''
+'''
+
+ruby='''
+'''
+
+python='''
+'''
