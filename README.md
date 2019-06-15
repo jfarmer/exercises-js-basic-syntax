@@ -6,8 +6,8 @@
 - [The Exercises](#the-exercises)
 - [Exercise Goals](#exercise-goals)
 - [Materials](#materials)
-- [Exercise Structure and Restrictions](#exercise-structure-and-restrictions)
-  - [Why These Restrictions](#why-these-restrictions)
+- [The Rules](#the-rules)
+  - [Why These Rules](#why-these-rules)
 
 ## Introduction
 
@@ -53,9 +53,6 @@ Please read the other sections before diving into these exercises.
 1. [Count smaller than 10](exercises/count-smaller-than-ten)
 1. [Count larger than X](exercises/count-larger-than)
 1. [Count smaller than Y](exercises/count-smaller-than)
-1. [Count number of cards](exercises/length)
-1. [Count max](exercises/count-max)
-1. [Average](exercises/average)
 
 ## Exercise Goals
 
@@ -79,7 +76,7 @@ Every exercise requires the following materials:
 
 We will not be writing any code.
 
-## Exercise Structure and Restrictions
+## The Rules
 
 You have a stack of sticky notes and a pen. At the start of each exercise, you will...
 
@@ -88,7 +85,7 @@ You have a stack of sticky notes and a pen. At the start of each exercise, you w
 
 Using the sticky notes as scratch paper (and *only* the sticky notes) your job is to answer the question, write down the answer on a sticky note, and return it.
 
-There are three restrictions:
+There are three rules:
 
 1. You can flip over and look at only one index card at a time.
 
@@ -98,9 +95,9 @@ There are three restrictions:
    - Write a new word or number on a blank sticky note
    - Replace a word or number on a non-blank sticky note with something else
 
-### Why These Restrictions
+### Why These Rules
 
-These restrictions are designed to prevent you from using human capabilities that a computer simply doesn't have.
+These rules are designed to prevent you from using human capabilities that a computer simply doesn't have.
 
 For example, if you were handed a stack of index cards with numbers and asked to find the largest number, you might spread them out on the floor with the numbers facing up.  You'd then scan the cards and pick out the largest number based on heuristics like
 
