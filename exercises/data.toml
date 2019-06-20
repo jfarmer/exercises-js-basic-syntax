@@ -82,8 +82,8 @@ print(largest_number)
 [[exercises]]
 title="Find Smallest Number"
 slug="find-smallest-number"
-short_description=""
-friend_prompt=""
+short_description="Given a list of numbers, let's invent a process to find the smallest number in the list. For example, if the list is `[0, -10, 72, 4]` then the smallest number would be `-10`."
+friend_prompt="find the smallest number in the stack of index cards"
 extra_parameters = []
 pseudocode='''
 define procedure find_largest_number:
@@ -161,9 +161,13 @@ print(smallest_number)
 [[exercises]]
 title="Is In List"
 slug="is-in-list"
-short_description=""
-friend_prompt=""
-extra_parameters = []
+short_description='''
+Given a list of numbers and a specific number, let's invent a process that tells us whether the specific number is in the list.
+'''
+friend_prompt="write 'YES' if the number is in the stack of index cards, 'NO' if it isn't,"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `15`"
+]
 pseudocode='''
 define procedure is_in_list:
   input:
