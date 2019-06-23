@@ -1,7 +1,6 @@
-# Find Largest Number
+# Count Smaller Than 10
 
-Given a list of numbers, let's invent a process to find the largest number.
-
+Given a list of numbers, let's invent a process to count how many numbers in the list are smaller than 10.  For example, if the list is `[10, 45, -2, 109]` then there is `1` number smaller than `10` in the list.
 
 ## Contents <!-- omit in toc -->
 
@@ -17,7 +16,7 @@ Imagine that you have a pen/pencil and a pad of stick notes. A friend hands you 
 
 - A stack of 20 cards with random numbers written on one side, all face down
 
-Your friend then asks you to find the largest number in the stack of index cards and hand them a sticky note with the answer written on it.
+Your friend then asks you to count how many index cards contain a number smaller than the number on the sticky note and hand them a sticky note with the answer written on it.
 
 You have two tasks:
 

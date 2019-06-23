@@ -1,6 +1,6 @@
-# Find Largest Number
+# Find Largest Even Number
 
-Given a list of numbers, let's invent a process to find the largest number.
+Given a list of numbers, let's invent a process to find the largest even number from a list of numbers. A number is even if it is divisible by 2: -14, 0, 18, 22, 144 are all even.
 
 
 ## Contents <!-- omit in toc -->
@@ -17,7 +17,7 @@ Imagine that you have a pen/pencil and a pad of stick notes. A friend hands you 
 
 - A stack of 20 cards with random numbers written on one side, all face down
 
-Your friend then asks you to find the largest number in the stack of index cards and hand them a sticky note with the answer written on it.
+Your friend then asks you to find the largest even number in the stack of index cards and hand them a sticky note with the answer written on it.
 
 You have two tasks:
 

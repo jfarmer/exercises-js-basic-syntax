@@ -1,0 +1,30 @@
+{
+  "name": "index-cards",
+  "version": "1.0.0",
+  "description": "## Table of Contents <!-- omit in toc -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfarmer/exercises-javascript-basic-syntax.git"
+  },
+  "author": "Jesse Farmer <jesse@20bits.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/jfarmer/exercises-javascript-basic-syntax/issues"
+  },
+  "homepage": "https://github.com/jfarmer/exercises-javascript-basic-syntax#readme",
+  "dependencies": {
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "handlebars": "^4.1.2"
+  }
+}

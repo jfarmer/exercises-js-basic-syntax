@@ -1,7 +1,6 @@
-# Find Largest Number
+# Count Larger Than X
 
-Given a list of numbers, let's invent a process to find the largest number.
-
+Given a list of numbers and a specific number, let's invent a process to count how many numbers in the list are larger than that specific number.  For example, if the list is `[10, 45, -2, 109]` and number is `13` then there are `2` numbers larger than `13` in the list.
 
 ## Contents <!-- omit in toc -->
 
@@ -17,7 +16,7 @@ Imagine that you have a pen/pencil and a pad of stick notes. A friend hands you 
 
 - A stack of 20 cards with random numbers written on one side, all face down
 
-Your friend then asks you to find the largest number in the stack of index cards and hand them a sticky note with the answer written on it.
+Your friend then asks you to count how many index cards contain a number larger than the number on the sticky note and hand them a sticky note with the answer written on it.
 
 You have two tasks:
 

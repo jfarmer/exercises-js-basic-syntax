@@ -1,6 +1,6 @@
-# Find Largest Number
+# Count Specific Number
 
-Given a list of numbers, let's invent a process to find the largest number.
+Given a list of numbers and a specific number, let's invent a process to count how many times that specific number appears in the list.  For example, if the list was `[1, 15, -10, 3, 15, 88]` and you were asked to count how many times `15` appeared, the answer would be `2`.
 
 
 ## Contents <!-- omit in toc -->
@@ -17,7 +17,7 @@ Imagine that you have a pen/pencil and a pad of stick notes. A friend hands you 
 
 - A stack of 20 cards with random numbers written on one side, all face down
 
-Your friend then asks you to find the largest number in the stack of index cards and hand them a sticky note with the answer written on it.
+Your friend then asks you to count how many times the number on the sticky note appears among the index cards and hand them a sticky note with the answer written on it.
 
 You have two tasks:
 

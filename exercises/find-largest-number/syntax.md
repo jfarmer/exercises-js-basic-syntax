@@ -3,8 +3,8 @@
 ## Contents <!-- omit in toc -->
 
 - [JavaScript](#javascript)
-- [Python](#python)
 - [Ruby](#ruby)
+- [Python](#python)
 
 ## JavaScript
 
@@ -25,43 +25,49 @@ let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
 let largestNumber = findLargestNumber(pileOfNumbers);
 
 console.log(largest_number);
+
 ```
 
 ## Python
 
-```python
-def find_largest_number(numbers):
-  max_so_far = numbers[0]
+```javascript
+function findLargestNumber(numbers) {
+  let maxSoFar = numbers[0];
 
-  for number in numbers:
-    if number > max_so_far:
-      max_so_far = number
+  for(let number of numbers) {
+    if (number > maxSoFar) {
+      maxSoFar = number;
+    }
+  }
 
-  return max_so_far
+  return maxSoFar;
+}
 
-pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
-largest_number = find_largest_number(pile_of_numbers)
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let largestNumber = findLargestNumber(pileOfNumbers);
 
-print(largest_number)
+console.log(largest_number);
+
 ```
 
 ## Ruby
 
-```ruby
-def find_largest_number(numbers)
-  max_so_far = numbers.first
+```javascript
+function findLargestNumber(numbers) {
+  let maxSoFar = numbers[0];
 
-  numbers.each do |number|
-    if number > max_so_far
-      max_so_far = number
-    end
-  end
+  for(let number of numbers) {
+    if (number > maxSoFar) {
+      maxSoFar = number;
+    }
+  }
 
-  return max_so_far
-end
+  return maxSoFar;
+}
 
-pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
-largest_number = find_largest_number(pile_of_numbers)
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let largestNumber = findLargestNumber(pileOfNumbers);
 
-puts(largest_number)
+console.log(largest_number);
+
 ```

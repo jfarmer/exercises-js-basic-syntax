@@ -1,6 +1,6 @@
-# Find Largest Number
+# Find Largest Odd Number
 
-Given a list of numbers, let's invent a process to find the largest number.
+Given a list of numbers, let's invent a process to find the largest odd number from a list of numbers. A number is odd if it is *not* divisible by 2: 13, 189, -7, and 1 are all odd.
 
 
 ## Contents <!-- omit in toc -->
@@ -17,7 +17,7 @@ Imagine that you have a pen/pencil and a pad of stick notes. A friend hands you 
 
 - A stack of 20 cards with random numbers written on one side, all face down
 
-Your friend then asks you to find the largest number in the stack of index cards and hand them a sticky note with the answer written on it.
+Your friend then asks you to find the largest odd number in the stack of index cards and hand them a sticky note with the answer written on it.
 
 You have two tasks:
 

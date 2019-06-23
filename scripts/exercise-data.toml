@@ -1,0 +1,1222 @@
+[[exercises]]
+title="Find Largest Number"
+slug="find-largest-number"
+short_description='''
+Given a list of numbers, let's invent a process to find the largest number.
+'''
+friend_prompt="find the largest number in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure find_largest_number:
+  input: a pile of numbers, call it PILE
+
+  look at first NUMBER in pile and write it on sticky note, call it MAX_SO_FAR
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > MAX_SO_FAR, then:
+      replace MAX_SO_FAR with NUMBER on sticky note
+    end if
+  end foreach
+
+  hand back MAX_SO_FAR sticky note
+end define procedure
+
+let PILE be [10, 9, -2, 100, 17]
+call procedure find_largest_number with inputs: PILE // will give us 100
+'''
+
+javascript='''
+function findLargestNumber(numbers) {
+  let maxSoFar = numbers[0];
+
+  for(let number of numbers) {
+    if (number > maxSoFar) {
+      maxSoFar = number;
+    }
+  }
+
+  return maxSoFar;
+}
+
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let largestNumber = findLargestNumber(pileOfNumbers);
+
+console.log(largest_number);
+'''
+
+ruby='''
+def find_largest_number(numbers)
+  max_so_far = numbers.first
+
+  numbers.each do |number|
+    if number > max_so_far
+      max_so_far = number
+    end
+  end
+
+  return max_so_far
+end
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
+
+puts(largest_number)
+'''
+
+python='''
+def find_largest_number(numbers):
+  max_so_far = numbers[0]
+
+  for number in numbers:
+    if number > max_so_far:
+      max_so_far = number
+
+  return max_so_far
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
+
+print(largest_number)
+'''
+
+[[exercises]]
+title="Find Smallest Number"
+slug="find-smallest-number"
+short_description="Given a list of numbers, let's invent a process to find the smallest number in the list. For example, if the list is `[0, -10, 72, 4]` then the smallest number would be `-10`."
+friend_prompt="find the smallest number in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure find_largest_number:
+  input: a pile of numbers, call it PILE
+
+  look at first NUMBER in pile and write it on sticky note, call it MIN_SO_FAR
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER < MIN_SO_FAR, then:
+      replace MIN_SO_FAR with NUMBER on sticky note
+    end if
+  end foreach
+
+  hand back MIN_SO_FAR sticky note
+end define procedure
+
+let PILE be [10, 9, -2, 100, 17]
+call procedure find_largest_number with inputs: PILE // will give us 100
+'''
+
+javascript='''
+function findSmallestNumber(numbers) {
+  let minSoFar = numbers[0];
+
+  for(let number of numbers) {
+    if (number < minSoFar) {
+      minSoFar = number;
+    }
+  }
+
+  return minSoFar;
+}
+
+let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
+let smallestNumber = findSmallestNumber(pileOfNumbers);
+
+console.log(smallestNumber);
+'''
+
+ruby='''
+def find_smallest_number(numbers)
+  min_so_far = numbers.first
+
+  numbers.each do |number|
+    if number < min_so_far
+      min_so_far = number
+    end
+  end
+
+  return min_so_far
+end
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
+
+puts(smallest_number)
+'''
+
+python='''
+def find_smallest_number(numbers):
+  min_so_far = numbers[0]
+
+  for number in numbers:
+    if number < min_so_far:
+      min_so_far = number
+
+  return min_so_far
+
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
+
+print(smallest_number)
+'''
+
+[[exercises]]
+title="Is In List"
+slug="is-in-list"
+short_description='''
+Given a list of numbers and a specific number, let's invent a process that tells us whether the specific number is in the list.
+'''
+friend_prompt="write 'YES' if the number is in the stack of index cards, 'NO' if it isn't,"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `15`"
+]
+pseudocode='''
+define procedure is_in_list:
+  input:
+    - a pile of numbers, call it PILE
+    - a number to search for, call it SEARCH_NUMBER
+
+  write "No" on a sticky note, call it RESULT
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER equals SEARCH_NUMBER, then:
+      replace RESULT with "Yes" on sticky note
+      return sticky note (and stop looking at numbers)
+    end if
+  end foreach
+
+  return sticky note
+end define procedure
+
+let PILE be [10, 9, -2, 100, 17]
+call procedure is_in_list with inputs: PILE, 9 // will give us "Yes"
+call procedure is_in_list with inputs: PILE, 9 // will give us "Yes"
+
+'''
+
+javascript='''
+function isInList(pile, searchNumber) {
+  let result = false;
+
+  for(let number of pile) {
+    if (number === searchNumber) {
+      result = true;
+      return result;
+    }
+  }
+
+  return result;
+}
+
+let pile = [10, 9, -2, 100];
+let is9InList = isInList(pile, 9);
+let is14InList = isInList(pile, 14);
+
+console.log(`is9InList has value #{is9InList}`);
+console.log(`is14InList has value #{is14InList}`);
+'''
+
+ruby='''
+def is_in_list(pile, search_number)
+  pile.each do |number|
+    if number == search_number
+      result = true
+      return result
+    end
+  end
+
+  result = false
+  return result
+end
+
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
+'''
+
+python='''
+def is_in_list(pile, search_number):
+  for number in pile:
+    if number == search_number:
+      result = True
+      return result
+
+  result = False
+  return result
+
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
+'''
+
+php='''
+function is_in_list($pile, $search_number) {
+  foreach ($pile as $search_number) {
+    if ($number == $search_number) {
+      $result = TRUE;
+      return $result;
+    }
+  }
+
+  $result = FALSE
+  return $result
+}
+
+$pile = [10, 9, -2, 100]
+is_in_list($pile, 9)  # => true
+is_in_list($pile, 14) # => false
+'''
+
+[[exercises]]
+title="Find Largest Even Number"
+slug="find-largest-even-number"
+short_description='''
+Given a list of numbers, let's invent a process to find the largest even number from a list of numbers. A number is even if it is divisible by 2: -14, 0, 18, 22, 144 are all even.
+'''
+friend_prompt="find the largest even number in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure find_largest_even_number:
+  input: a pile of numbers, call it PILE
+
+  write "None" on sticky note, call it MAX_SO_FAR
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER is even, then:
+      if MAX_SO_FAR is "None" then:
+        replace MAX_SO_FAR with NUMBER on sticky note
+      otherwise, if NUMBER > MAX_SO_FAR, then:
+        replace MAX_SO_FAR with NUMBER on sticky note
+      end if
+    end if
+  end foreach
+
+  hand back sticky note
+end define procedure
+
+let PILE be [10, 9, -2, 18, 101, 17]
+call procedure find_largest_even_number with inputs: PILE // will give us 18
+'''
+
+javascript='''
+function findLargestEvenNumber(numbers) {
+  let maxSoFar = undefined;
+
+  for(let number of numbers) {
+    if (number % 2 === 0) {
+      if (maxSoFar === undefined) {
+        maxSoFar = number;
+      } else if (number > maxSoFar) {
+        maxSoFar = number;
+      }
+    }
+  }
+
+  return maxSoFar;
+}
+
+let pileOfNumbers = [10, 9, -2, 18, 101, 17];
+let result = findLargestEvenNumber(pileOfNumbers);
+
+console.log(result); // => 18
+'''
+
+ruby='''
+def find_largest_even_number(numbers)
+  max_so_far = nil
+
+  numbers.each do |number|
+    if number.even?
+      if max_so_far.nil?
+        max_so_far = number
+      elsif number > max_so_far
+        max_so_far = number
+      end
+    end
+  end
+
+  return max_so_far
+end
+
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_even_number(pile_of_numbers)
+
+puts(result)
+'''
+
+python='''
+def find_largest_even_number(numbers):
+  max_so_far = None
+
+  for number in numbers:
+    if number % 2 == 0:
+      if max_so_far is None:
+        max_so_far = number
+      elif number > max_so_far:
+        max_so_far = number
+
+  return max_so_far
+
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_even_number(pile_of_numbers)
+
+print(result)
+'''
+
+[[exercises]]
+title="Find Largest Odd Number"
+slug="find-largest-odd-number"
+short_description='''
+Given a list of numbers, let's invent a process to find the largest odd number from a list of numbers. A number is odd if it is *not* divisible by 2: 13, 189, -7, and 1 are all odd.
+'''
+friend_prompt="find the largest odd number in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure find_largest_odd_number:
+  input: a pile of numbers, call it PILE
+
+  write "None" on sticky note, call it MAX_SO_FAR
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER is odd, then:
+      if MAX_SO_FAR is "None" then:
+        replace MAX_SO_FAR with NUMBER on sticky note
+      otherwise, if NUMBER > MAX_SO_FAR, then:
+        replace MAX_SO_FAR with NUMBER on sticky note
+      end if
+    end if
+  end foreach
+
+  hand back sticky note
+end define procedure
+
+let PILE be [10, 9, -2, 18, 101, 17]
+call procedure find_largest_odd_number with inputs: PILE // will give us 101
+'''
+
+javascript='''
+function findLargestOddNumber(numbers) {
+  let maxSoFar = undefined;
+
+  for(let number of numbers) {
+    if (number % 2 === 1) {
+      if (maxSoFar === undefined) {
+        maxSoFar = number;
+      } else if (number > maxSoFar) {
+        maxSoFar = number;
+      }
+    }
+  }
+
+  return maxSoFar;
+}
+
+let pileOfNumbers = [10, 9, -2, 18, 101, 17];
+let result = findLargestOddNumber(pileOfNumbers);
+
+console.log(result); // => 101
+'''
+
+ruby='''
+def find_largest_odd_number(numbers)
+  max_so_far = nil
+
+  numbers.each do |number|
+    if number.odd?
+      if max_so_far.nil?
+        max_so_far = number
+      elsif number > max_so_far
+        max_so_far = number
+      end
+    end
+  end
+
+  return max_so_far
+end
+
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_odd_number(pile_of_numbers)
+
+puts(result)
+'''
+
+python='''
+def find_largest_odd_number(numbers):
+  max_so_far = None
+
+  for number in numbers:
+    if number % 2 == 1:
+      if max_so_far is None:
+        max_so_far = number
+      elif number > max_so_far:
+        max_so_far = number
+
+  return max_so_far
+
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_odd_number(pile_of_numbers)
+
+print(result)
+'''
+
+[[exercises]]
+title="Find second-largest number"
+slug="find-second-largest-number"
+short_description='''
+Given a list of numbers, let's invent a process to find the second-largest number in the list. For example, if our list is `[56, 10, 15, 109, 88]` then the second-largest number is 88.
+'''
+friend_prompt="find the second-largest number in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure find_second_largest_number
+  input: a pile of numbers, call it PILE
+
+  // Comment: The idea is to keep track of the two-largest numbers we've seen as we
+  // look through the stack of cards. To start, we look at the first two cards
+  // and arrange them according to which is largest and which is second-largest so far.
+
+  put aside one sticky note, call it MAX_SO_FAR
+  put aside another sticky note, call it SECOND_MAX_SO_FAR
+
+  write down first number in PILE, call it FIRST_NUMBER
+  write down second number in PILE, call it SECOND_NUMBER
+
+  if FIRST_NUMBER > SECOND_NUMBER, then:
+    replace value of MAX_SO_FAR with value of FIRST_NUMBER
+    replace value of SEOND_MAX_SO_FAR with SECOND_NUMBER
+  otherwise:
+    replace value of MAX_SO_FAR with value of SECOND_NUMBER
+    replace value of SEOND_MAX_SO_FAR with FIRST_NUMBER
+  end if
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > MAX_SO_FAR, then:
+      // Comment: Since NUMBER > MAX_SO_FAR, the largest we've seen so far is now the second-largest we've seen so far
+
+      replace value of SECOND_MAX_SO_FAR with value of MAX_SO_FAR
+      replace value of MAX_SO_FAR with value of NUMBER
+    otherwise, if NUMBER > SECOND_MAX_SO_FAR, then:
+      // Comment: We know NUMBER is between MAX_SO_FAR and SEOND_MAX_SO_FAR, so NUMBER is now second-largest we've seen
+
+      replace value of SECOND_MAX_SO_FAR with value of NUMBER
+    end if
+  end foreach
+
+  hand back SECOND_MAX_SO_FAR sticky note
+end define procedure
+
+let PILE be [56, 10, 15, 109, 88]
+call procedure find_second_largest_number with inputs: PILE // will give us 88
+'''
+
+javascript='''
+function findSecondLargestNumber(list) {
+  let maxSoFar = undefined;
+  let secondMaxSoFar = undefined;
+
+  let firstNumber = list[0];
+  let secondNumber = list[1];
+
+  if (firstNumber > secondNumber) {
+    maxSoFar = firstNumber;
+    secondMaxSoFar = secondNumber;
+  } else {
+    maxSoFar = secondNumber;
+    secondMaxSoFar = firstNumber;
+  }
+
+  for(let number of list) {
+    if (number > maxSoFar) {
+      secondMaxSoFar = maxSoFar;
+      maxSoFar = number;
+    } else if (number > secondMaxSoFar) {
+      secondMaxSoFar = number;
+    }
+  }
+
+  return secondMaxSoFar;
+}
+
+let pile = [56, 10, 15, 109, 88];
+let result = findSecondLargestNumber(pile);
+
+console.log(result);
+'''
+
+ruby='''
+def find_second_largest_number(list_of_numbers)
+  max_so_far = nil
+  second_max_so_far = nil
+
+  first_number = list_of_numbers[0]
+  second_number = list_of_numbers[1]
+
+  if (first_number > second_second_number)
+    max_so_far = first_number
+    second_max_so_far = second_number
+  else
+    max_so_far = second_number
+    second_max_so_far = first_number
+  end
+
+  list_of_numbers.each do |number|
+    if number > max_so_far
+      second_max_so_far = max_so_far
+      max_so_far = number
+    elsif number > second_max_so_far
+      second_max_so_far = number
+    end
+  end
+
+  return second_max_so_far
+end
+
+pile = [56, 10, 15, 109, 88]
+result = find_second_largest_number(pile)
+
+puts(result)
+'''
+
+python='''
+def find_second_largest_number(list_of_numbers):
+  max_so_far = None
+  second_max_so_far = None
+
+  first_number = list_of_numbers[0]
+  second_number = list_of_numbers[1]
+
+  if (first_number > second_second_number):
+    max_so_far = first_number
+    second_max_so_far = second_number
+  else:
+    max_so_far = second_number
+    second_max_so_far = first_number
+
+  list_of_numbers.each do |number|
+    if (number > max_so_far):
+      second_max_so_far = max_so_far
+      max_so_far = number
+    elif (number > second_max_so_far):
+      second_max_so_far = number
+
+  return second_max_so_far
+end
+
+pile = [56, 10, 15, 109, 88]
+result = find_second_largest_number(pile)
+
+print(result)
+'''
+
+[[exercises]]
+title="Count Specific Number"
+slug="count-number"
+short_description='''
+Given a list of numbers and a specific number, let's invent a process to count how many times that specific number appears in the list.  For example, if the list was `[1, 15, -10, 3, 15, 88]` and you were asked to count how many times `15` appeared, the answer would be `2`.
+'''
+friend_prompt="count how many times the number on the sticky note appears among the index cards"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `15`"
+]
+pseudocode='''
+define procedure count_number
+  input:
+    - a pile of numbers, call it PILE
+    - a number to count, call it SEARCH_NUMBER
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER equals SEARCH_NUMBER, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_number with inputs: PILE, 15  // will give 2 since 15 appears twice
+call procedure count_number with inputs: PILE, 3   // will give 1 since 3 appears once
+call procedure count_number with inputs: PILE, 109 // will give 0 since 109 doesn't appear
+'''
+
+javascript='''
+function countNumber(list, numberToCount) {
+  let countSoFar = 0;
+
+  for(let number of list) {
+    if (number === numberToCount) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countOf15 = countNumber(pile, 15);   // should be 2
+let countOf3 = countNumber(pile, 3);     // should be 1
+let countOf109 = countNumber(pile, 109); // should be 0
+
+console.log(`Count of 15 is #{countOf15}`);
+console.log(`Count of 3 is #{countOf3}`);
+console.log(`Count of 109 is #{countOf109}`);
+'''
+
+ruby='''
+def count_number(list, number_to_count)
+  count_so_far = 0
+
+  list.each do |number|
+    if (number == number_to_count)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_of_15 = count_number(pile, 15)   // should be 2
+count_of_3 = count_number(pile, 3)     // should be 1
+count_of_109 = count_number(pile, 109) // should be 0
+
+puts("Count of 15 is #{count_of_15}")
+puts("Count of 3 is #{count_of_3}")
+puts("Count of 109 is #{count_of_109}")
+'''
+
+python='''
+def count_number(list, number_to_count)
+  count_so_far = 0
+
+  for number in list:
+    if number == number_to_count:
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_of_15 = count_number(pile, 15)   // should be 2
+count_of_3 = count_number(pile, 3)     // should be 1
+count_of_109 = count_number(pile, 109) // should be 0
+
+print(f'Count of 15 is {count_of_15}')
+print(f'Count of 3 is {count_of_3}')
+print(f'Count of 109 is {count_of_109}')
+'''
+
+[[exercises]]
+title="Count Positive Numbers"
+slug="count-positive-numbers"
+short_description="Given a list of numbers, let's invent a process that counts how many of them are positive (i.e., greater than 0)."
+friend_prompt="count the number of positive numbers in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure count_positive
+  input: a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > 0, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_positive with inputs: PILE  // will give 5 since there are five positive numbers
+'''
+
+javascript='''
+function countPositive(list) {
+  let countSoFar = 0;
+
+  for(let number of list) {
+    if (number > 0) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let positiveCount = countPositive(pile);   // will give 5
+
+console.log(`There are #{positiveCount} positive numbers in the list.`);
+'''
+
+ruby='''
+def count_positive(list)
+  count_so_far = 0
+
+  list.each do |number|
+    if (number > 0)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+positive_count = count_positive(pile)
+
+puts("There are #{positive_count} positive numbers in the list.")
+'''
+
+python='''
+def count_positive(list)
+  count_so_far = 0
+
+  for number in list:
+    if number > 0 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+positive_count = count_positive(pile)
+
+print(f'There are {positive_count} positive numbers in the list.')
+'''
+
+[[exercises]]
+title="Count Negative Numbers"
+slug="count-negative-numbers"
+short_description="Given a list of numbers, let's invent a process that counts how many of them are negative (i.e., less than 0)."
+friend_prompt="count the number of negative numbers in the stack of index cards"
+extra_parameters = []
+pseudocode='''
+define procedure count_negative
+  input: a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER < 0, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_negative with inputs: PILE  // will give 1 since there is one negative numbers
+'''
+
+javascript='''
+function countNegative(list) {
+  let countSoFar = 0;
+
+  for(let number of list) {
+    if (number > 0) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let negativeCount = countNegative(pile);   // will give 1
+
+console.log(`There are #{negativeCount} negative numbers in the list.`);
+'''
+
+ruby='''
+def count_negative(list)
+  count_so_far = 0
+
+  list.each do |number|
+    if (number < 0)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+negative_count = count_negative(pile)
+
+puts("There are #{negative_count} negative numbers in the list.")
+'''
+
+python='''
+def count_negative(list)
+  count_so_far = 0
+
+  for number in list:
+    if number < 0 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+negative_count = count_negative(pile)   // should be 1
+
+print(f'There are {negative_count} positive numbers in the list.')
+'''
+
+[[exercises]]
+title="Count Smaller Than X"
+slug="count-smaller-than"
+short_description="Given a list of numbers and a specific number, let's invent a process to count how many numbers in the list are smaller than that specific number.  For example, if the list is `[10, 45, -2, 109]` and number is `13` then there are `2` numbers smaller than `13` in the list."
+friend_prompt="count how many index cards contain a number smaller than the number on the sticky note"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `13`"
+]
+pseudocode='''
+define procedure count_smaller_than
+  input:
+    - a pile of numbers, call it PILE
+    - a specific number, call it CUTOFF
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER < CUTOFF, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_smaller_than with inputs: PILE, 10  // will give 3 since there are three numbers smaller than 10
+call procedure count_smaller_than with inputs: PILE, 0   // will give 1 since there is one number smaller than 0
+call procedure count_smaller_than with inputs: PILE, 50  // will give 5 since there are five numbers smaller than 50
+'''
+
+javascript='''
+function countSmallerThan(numbers, cutoff) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number < cutoff) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countBelow10 = countSmallerThan(pile, 10);
+let countBelow0 = countSmallerThan(pile, 0);
+let countBelow50 = countSmallerThan(pile, 50);
+
+console.log(`There are #{countBelow10} numbers smaller than 10 in the list.`);
+console.log(`There are #{countBelow0} numbers smaller than 0 in the list.`);
+console.log(`There are #{countBelow50} numbers smaller than 50 in the list.`);
+'''
+
+ruby='''
+def count_smaller_than(numbers, cutoff)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number < cutoff)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than(pile, 10)
+count_below_0 = count_smaller_than(pile, 0)
+count_below_50 = count_smaller_than(pile, 50)
+
+puts("There are #{count_below_10} numbers smaller than 10 in the list.")
+puts("There are #{count_below_0} numbers smaller than 0 in the list.")
+puts("There are #{count_below_50} numbers smaller than 50 in the list.")
+'''
+
+python='''
+def count_smaller_than(numbers, cutoff)
+  count_so_far = 0
+
+  for number in numbers:
+    if number < cutoff :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than(pile, 10)
+count_below_0 = count_smaller_than(pile, 0)
+count_below_50 = count_smaller_than(pile, 50)
+
+print(f'There are {count_below_10} numbers smaller than 10 in the list.')
+print(f'There are {count_below_0} numbers smaller than 0 in the list.')
+print(f'There are {count_below_50} numbers smaller than 50 in the list.')
+'''
+
+[[exercises]]
+title="Count Larger Than X"
+slug="count-larger-than"
+short_description="Given a list of numbers and a specific number, let's invent a process to count how many numbers in the list are larger than that specific number.  For example, if the list is `[10, 45, -2, 109]` and number is `13` then there are `2` numbers larger than `13` in the list."
+friend_prompt="count how many index cards contain a number larger than the number on the sticky note"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `13`"
+]
+pseudocode='''
+define procedure count_larger_than
+  input:
+    - a pile of numbers, call it PILE
+    - a specific number, call it CUTOFF
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > CUTOFF, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_larger_than with inputs: PILE, 10  // will give 3 since there are three numbers larger than 10
+call procedure count_larger_than with inputs: PILE, 0   // will give 1 since there is one number larger than 0
+call procedure count_larger_than with inputs: PILE, 50  // will give 5 since there are five numbers larger than 50
+'''
+
+javascript='''
+function countLargerThan(numbers, cutoff) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number > cutoff) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countAbove10 = countLargerThan(pile, 10);
+let countAbove0 = countLargerThan(pile, 0);
+let countAbove50 = countLargerThan(pile, 50);
+
+console.log(`There are #{countAbove10} numbers larger than 10 in the list.`);
+console.log(`There are #{countAbove0} numbers larger than 0 in the list.`);
+console.log(`There are #{countAbove50} numbers larger than 50 in the list.`);
+'''
+
+ruby='''
+def count_larger_than(numbers, cutoff)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number > cutoff)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than(pile, 10)
+count_above_0 = count_larger_than(pile, 0)
+count_above_50 = count_larger_than(pile, 50)
+
+puts("There are #{count_above_10} numbers larger than 10 in the list.")
+puts("There are #{count_above_0} numbers larger than 0 in the list.")
+puts("There are #{count_above_50} numbers larger than 50 in the list.")
+'''
+
+python='''
+def count_larger_than(numbers, cutoff)
+  count_so_far = 0
+
+  for number in numbers:
+    if number > cutoff :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than(pile, 10)
+count_above_0 = count_larger_than(pile, 0)
+count_above_50 = count_larger_than(pile, 50)
+
+print(f'There are {count_above_10} numbers larger than 10 in the list.')
+print(f'There are {count_above_0} numbers larger than 0 in the list.')
+print(f'There are {count_above_50} numbers larger than 50 in the list.')
+'''
+
+[[exercises]]
+title="Count Larger Than 10"
+slug="count-larger-than-ten"
+short_description="Given a list of numbers, let's invent a process to count how many numbers in the list are larger than 10.  For example, if the list is `[10, 45, -2, 109]` then there are `2` numbers larger than `10` in the list."
+friend_prompt="count how many index cards contain a number larger than the number on the sticky note"
+extra_parameters = []
+
+pseudocode='''
+define procedure count_smaller_than_ten
+  inputs:
+    - a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > 10, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_smaller_than_ten with inputs: PILE, 10  // will give 3 since there are three numbers larger than 10
+call procedure count_smaller_than_ten with inputs: PILE, 0   // will give 1 since there is one number larger than 0
+call procedure count_smaller_than_ten with inputs: PILE, 50  // will give 5 since there are five numbers larger than 50
+'''
+
+javascript='''
+function countLargerThanTen(numbers) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number > 10) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countAbove10 = countLargerThanTen(pile);
+
+console.log(`There are #{countAbove10} numbers larger than 10 in the list.`);
+'''
+
+ruby='''
+def count_larger_than_ten(numbers)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number > 10)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than_ten(pile)
+
+puts("There are #{count_above_10} numbers larger than 10 in the list.")
+'''
+
+python='''
+def count_larger_than_ten(numbers)
+  count_so_far = 0
+
+  for number in numbers:
+    if number > 10 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than_ten(pile)
+
+print(f'There are {count_above_10} numbers larger than 10 in the list.')
+'''
+
+[[exercises]]
+title="Count Smaller Than 10"
+slug="count-smaller-than-ten"
+short_description="Given a list of numbers, let's invent a process to count how many numbers in the list are smaller than 10.  For example, if the list is `[10, 45, -2, 109]` then there is `1` number smaller than `10` in the list."
+friend_prompt="count how many index cards contain a number smaller than the number on the sticky note"
+extra_parameters = []
+
+pseudocode='''
+define procedure count_larger_than_ten
+  inputs:
+    - a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > 10, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_larger_than_ten with inputs: PILE  // will give 3 since there are three numbers smaller than 10
+'''
+
+javascript='''
+function countSmallerThanTen(numbers) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number < 10) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countBelow10 = countSmallerThanTen(pile);
+
+console.log(`There are #{countBelow10} numbers smaller than 10 in the list.`);
+'''
+
+ruby='''
+def count_smaller_than_ten(numbers)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number < 10)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than_ten(pile)
+
+puts("There are #{count_below_10} numbers smaller than 10 in the list.")
+'''
+
+python='''
+def count_smaller_than_ten(numbers)
+  count_so_far = 0
+
+  for number in numbers:
+    if number < 10 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than_ten(pile)
+
+print(f'There are {count_below_10} numbers smaller than 10 in the list.')
+'''
