@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/jfarmer/exercises-javascript-basic-syntax.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jesse Farmer <jesse@20bits.com>",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
     "url": "https://github.com/jfarmer/exercises-javascript-basic-syntax/issues"
   },
