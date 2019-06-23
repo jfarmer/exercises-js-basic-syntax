@@ -23,8 +23,12 @@ async function main(templateDir, exerciseDataFilename) {
   const templateData = await parseTomlFile(exerciseDataFilename);
 
   for(let exercise of templateData['exercises']) {
+    const exerciseDir = path.join('exercises', exercise['slug']);
+
+    await fs.promises.mkdir(exerciseDir, { recursive: true });
+
     for(let [filename, template] of templates) {
-      const fullPath = path.join('exercises', exercise['slug'], filename);
+      const fullPath = path.join(exerciseDir, filename);
 
       await fs.promises.writeFile(fullPath, template(exercise), 'utf8');
     }

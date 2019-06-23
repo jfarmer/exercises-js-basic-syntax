@@ -959,3 +959,264 @@ print(f'There are {count_below_10} numbers smaller than 10 in the list.')
 print(f'There are {count_below_0} numbers smaller than 0 in the list.')
 print(f'There are {count_below_50} numbers smaller than 50 in the list.')
 '''
+
+[[exercises]]
+title="Count Larger Than X"
+slug="count-larger-than"
+short_description="Given a list of numbers and a specific number, let's invent a process to count how many numbers in the list are larger than that specific number.  For example, if the list is `[10, 45, -2, 109]` and number is `13` then there are `2` numbers larger than `13` in the list."
+friend_prompt="count how many index cards contain a number larger than the number on the sticky note"
+extra_parameters = [
+  "a sticky note with a specific number written on it, e.g., `13`"
+]
+pseudocode='''
+define procedure count_larger_than
+  input:
+    - a pile of numbers, call it PILE
+    - a specific number, call it CUTOFF
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > CUTOFF, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_larger_than with inputs: PILE, 10  // will give 3 since there are three numbers larger than 10
+call procedure count_larger_than with inputs: PILE, 0   // will give 1 since there is one number larger than 0
+call procedure count_larger_than with inputs: PILE, 50  // will give 5 since there are five numbers larger than 50
+'''
+
+javascript='''
+function countLargerThan(numbers, cutoff) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number > cutoff) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countAbove10 = countLargerThan(pile, 10);
+let countAbove0 = countLargerThan(pile, 0);
+let countAbove50 = countLargerThan(pile, 50);
+
+console.log(`There are #{countAbove10} numbers larger than 10 in the list.`);
+console.log(`There are #{countAbove0} numbers larger than 0 in the list.`);
+console.log(`There are #{countAbove50} numbers larger than 50 in the list.`);
+'''
+
+ruby='''
+def count_larger_than(numbers, cutoff)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number > cutoff)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than(pile, 10)
+count_above_0 = count_larger_than(pile, 0)
+count_above_50 = count_larger_than(pile, 50)
+
+puts("There are #{count_above_10} numbers larger than 10 in the list.")
+puts("There are #{count_above_0} numbers larger than 0 in the list.")
+puts("There are #{count_above_50} numbers larger than 50 in the list.")
+'''
+
+python='''
+def count_larger_than(numbers, cutoff)
+  count_so_far = 0
+
+  for number in numbers:
+    if number > cutoff :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than(pile, 10)
+count_above_0 = count_larger_than(pile, 0)
+count_above_50 = count_larger_than(pile, 50)
+
+print(f'There are {count_above_10} numbers larger than 10 in the list.')
+print(f'There are {count_above_0} numbers larger than 0 in the list.')
+print(f'There are {count_above_50} numbers larger than 50 in the list.')
+'''
+
+[[exercises]]
+title="Count Larger Than 10"
+slug="count-larger-than-ten"
+short_description="Given a list of numbers, let's invent a process to count how many numbers in the list are larger than 10.  For example, if the list is `[10, 45, -2, 109]` then there are `2` numbers larger than `10` in the list."
+friend_prompt="count how many index cards contain a number larger than the number on the sticky note"
+extra_parameters = []
+
+pseudocode='''
+define procedure count_smaller_than_ten
+  inputs:
+    - a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > 10, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_smaller_than_ten with inputs: PILE, 10  // will give 3 since there are three numbers larger than 10
+call procedure count_smaller_than_ten with inputs: PILE, 0   // will give 1 since there is one number larger than 0
+call procedure count_smaller_than_ten with inputs: PILE, 50  // will give 5 since there are five numbers larger than 50
+'''
+
+javascript='''
+function countLargerThanTen(numbers) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number > 10) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countAbove10 = countLargerThanTen(pile);
+
+console.log(`There are #{countAbove10} numbers larger than 10 in the list.`);
+'''
+
+ruby='''
+def count_larger_than_ten(numbers)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number > 10)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than_ten(pile)
+
+puts("There are #{count_above_10} numbers larger than 10 in the list.")
+'''
+
+python='''
+def count_larger_than_ten(numbers)
+  count_so_far = 0
+
+  for number in numbers:
+    if number > 10 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_above_10 = count_larger_than_ten(pile)
+
+print(f'There are {count_above_10} numbers larger than 10 in the list.')
+'''
+
+[[exercises]]
+title="Count Smaller Than 10"
+slug="count-smaller-than-ten"
+short_description="Given a list of numbers, let's invent a process to count how many numbers in the list are smaller than 10.  For example, if the list is `[10, 45, -2, 109]` then there is `1` number smaller than `10` in the list."
+friend_prompt="count how many index cards contain a number smaller than the number on the sticky note"
+extra_parameters = []
+
+pseudocode='''
+define procedure count_larger_than_ten
+  inputs:
+    - a pile of numbers, call it PILE
+
+  label a sticky note COUNT_SO_FAR, write 0 on it
+
+  foreach NUMBER in PILE, do the following:
+    if NUMBER > 10, then:
+      replace value of COUNT_SO_FAR with value of COUNT_SO_FAR plus 1
+    end if
+  end foreach
+
+  return COUNT_SO_FAR sticky note
+end define procedure
+
+let PILE be [1, 15, -10, 3, 15, 88]
+call procedure count_larger_than_ten with inputs: PILE  // will give 3 since there are three numbers smaller than 10
+'''
+
+javascript='''
+function countSmallerThanTen(numbers) {
+  let countSoFar = 0;
+
+  for(let number of numbers) {
+    if (number < 10) {
+      countSoFar = countSoFar + 1;
+    }
+  }
+
+  return countSoFar;
+}
+
+let pile = [1, 15, -10, 3, 15, 88];
+let countBelow10 = countSmallerThanTen(pile);
+
+console.log(`There are #{countBelow10} numbers smaller than 10 in the list.`);
+'''
+
+ruby='''
+def count_smaller_than_ten(numbers)
+  count_so_far = 0
+
+  numbers.each do |number|
+    if (number < 10)
+      count_so_far = count_so_far + 1
+    end
+  end
+
+  return count_so_far
+end
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than_ten(pile)
+
+puts("There are #{count_below_10} numbers smaller than 10 in the list.")
+'''
+
+python='''
+def count_smaller_than_ten(numbers)
+  count_so_far = 0
+
+  for number in numbers:
+    if number < 10 :
+      count_so_far = count_so_far + 1
+
+  return count_so_far
+
+pile = [1, 15, -10, 3, 15, 88]
+count_below_10 = count_smaller_than_ten(pile)
+
+print(f'There are {count_below_10} numbers smaller than 10 in the list.')
+'''
