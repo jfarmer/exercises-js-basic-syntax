@@ -34,49 +34,38 @@ console.log(`is14InList has value #{is14InList}`);
 ## Python
 
 ```javascript
-function isInList(pile, searchNumber) {
-  let result = false;
+def is_in_list(pile, search_number):
+  for number in pile:
+    if number == search_number:
+      result = True
+      return result
 
-  for(let number of pile) {
-    if (number === searchNumber) {
-      result = true;
-      return result;
-    }
-  }
+  result = False
+  return result
 
-  return result;
-}
-
-let pile = [10, 9, -2, 100];
-let is9InList = isInList(pile, 9);
-let is14InList = isInList(pile, 14);
-
-console.log(`is9InList has value #{is9InList}`);
-console.log(`is14InList has value #{is14InList}`);
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
 
 ```
 
 ## Ruby
 
 ```javascript
-function isInList(pile, searchNumber) {
-  let result = false;
+def is_in_list(pile, search_number)
+  pile.each do |number|
+    if number == search_number
+      result = true
+      return result
+    end
+  end
 
-  for(let number of pile) {
-    if (number === searchNumber) {
-      result = true;
-      return result;
-    }
-  }
+  result = false
+  return result
+end
 
-  return result;
-}
-
-let pile = [10, 9, -2, 100];
-let is9InList = isInList(pile, 9);
-let is14InList = isInList(pile, 14);
-
-console.log(`is9InList has value #{is9InList}`);
-console.log(`is14InList has value #{is14InList}`);
+pile = [10, 9, -2, 100]
+is_in_list(pile, 9)  # => true
+is_in_list(pile, 14) # => false
 
 ```

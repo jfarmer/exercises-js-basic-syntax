@@ -31,43 +31,40 @@ console.log(largest_number);
 ## Python
 
 ```javascript
-function findLargestNumber(numbers) {
-  let maxSoFar = numbers[0];
+def find_largest_number(numbers):
+  max_so_far = numbers[0]
 
-  for(let number of numbers) {
-    if (number > maxSoFar) {
-      maxSoFar = number;
-    }
-  }
+  for number in numbers:
+    if number > max_so_far:
+      max_so_far = number
 
-  return maxSoFar;
-}
+  return max_so_far
 
-let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
-let largestNumber = findLargestNumber(pileOfNumbers);
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
 
-console.log(largest_number);
+print(largest_number)
 
 ```
 
 ## Ruby
 
 ```javascript
-function findLargestNumber(numbers) {
-  let maxSoFar = numbers[0];
+def find_largest_number(numbers)
+  max_so_far = numbers.first
 
-  for(let number of numbers) {
-    if (number > maxSoFar) {
-      maxSoFar = number;
-    }
-  }
+  numbers.each do |number|
+    if number > max_so_far
+      max_so_far = number
+    end
+  end
 
-  return maxSoFar;
-}
+  return max_so_far
+end
 
-let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
-let largestNumber = findLargestNumber(pileOfNumbers);
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+largest_number = find_largest_number(pile_of_numbers)
 
-console.log(largest_number);
+puts(largest_number)
 
 ```

@@ -35,51 +35,47 @@ console.log(result); // => 18
 ## Python
 
 ```javascript
-function findLargestEvenNumber(numbers) {
-  let maxSoFar = undefined;
+def find_largest_even_number(numbers):
+  max_so_far = None
 
-  for(let number of numbers) {
-    if (number % 2 === 0) {
-      if (maxSoFar === undefined) {
-        maxSoFar = number;
-      } else if (number > maxSoFar) {
-        maxSoFar = number;
-      }
-    }
-  }
+  for number in numbers:
+    if number % 2 == 0:
+      if max_so_far is None:
+        max_so_far = number
+      elif number > max_so_far:
+        max_so_far = number
 
-  return maxSoFar;
-}
+  return max_so_far
 
-let pileOfNumbers = [10, 9, -2, 18, 101, 17];
-let result = findLargestEvenNumber(pileOfNumbers);
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_even_number(pile_of_numbers)
 
-console.log(result); // => 18
+print(result)
 
 ```
 
 ## Ruby
 
 ```javascript
-function findLargestEvenNumber(numbers) {
-  let maxSoFar = undefined;
+def find_largest_even_number(numbers)
+  max_so_far = nil
 
-  for(let number of numbers) {
-    if (number % 2 === 0) {
-      if (maxSoFar === undefined) {
-        maxSoFar = number;
-      } else if (number > maxSoFar) {
-        maxSoFar = number;
-      }
-    }
-  }
+  numbers.each do |number|
+    if number.even?
+      if max_so_far.nil?
+        max_so_far = number
+      elsif number > max_so_far
+        max_so_far = number
+      end
+    end
+  end
 
-  return maxSoFar;
-}
+  return max_so_far
+end
 
-let pileOfNumbers = [10, 9, -2, 18, 101, 17];
-let result = findLargestEvenNumber(pileOfNumbers);
+pile_of_numbers = [10, 9, -2, 18, 101, 17]
+result = find_largest_even_number(pile_of_numbers)
 
-console.log(result); // => 18
+puts(result)
 
 ```

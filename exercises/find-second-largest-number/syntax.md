@@ -46,73 +46,70 @@ console.log(result);
 ## Python
 
 ```javascript
-function findSecondLargestNumber(list) {
-  let maxSoFar = undefined;
-  let secondMaxSoFar = undefined;
+def find_second_largest_number(list_of_numbers):
+  max_so_far = None
+  second_max_so_far = None
 
-  let firstNumber = list[0];
-  let secondNumber = list[1];
+  first_number = list_of_numbers[0]
+  second_number = list_of_numbers[1]
 
-  if (firstNumber > secondNumber) {
-    maxSoFar = firstNumber;
-    secondMaxSoFar = secondNumber;
-  } else {
-    maxSoFar = secondNumber;
-    secondMaxSoFar = firstNumber;
-  }
+  if (first_number > second_second_number):
+    max_so_far = first_number
+    second_max_so_far = second_number
+  else:
+    max_so_far = second_number
+    second_max_so_far = first_number
 
-  for(let number of list) {
-    if (number > maxSoFar) {
-      secondMaxSoFar = maxSoFar;
-      maxSoFar = number;
-    } else if (number > secondMaxSoFar) {
-      secondMaxSoFar = number;
-    }
-  }
+  list_of_numbers.each do |number|
+    if (number > max_so_far):
+      second_max_so_far = max_so_far
+      max_so_far = number
+    elif (number > second_max_so_far):
+      second_max_so_far = number
 
-  return secondMaxSoFar;
-}
+  return second_max_so_far
+end
 
-let pile = [56, 10, 15, 109, 88];
-let result = findSecondLargestNumber(pile);
+pile = [56, 10, 15, 109, 88]
+result = find_second_largest_number(pile)
 
-console.log(result);
+print(result)
 
 ```
 
 ## Ruby
 
 ```javascript
-function findSecondLargestNumber(list) {
-  let maxSoFar = undefined;
-  let secondMaxSoFar = undefined;
+def find_second_largest_number(list_of_numbers)
+  max_so_far = nil
+  second_max_so_far = nil
 
-  let firstNumber = list[0];
-  let secondNumber = list[1];
+  first_number = list_of_numbers[0]
+  second_number = list_of_numbers[1]
 
-  if (firstNumber > secondNumber) {
-    maxSoFar = firstNumber;
-    secondMaxSoFar = secondNumber;
-  } else {
-    maxSoFar = secondNumber;
-    secondMaxSoFar = firstNumber;
-  }
+  if (first_number > second_second_number)
+    max_so_far = first_number
+    second_max_so_far = second_number
+  else
+    max_so_far = second_number
+    second_max_so_far = first_number
+  end
 
-  for(let number of list) {
-    if (number > maxSoFar) {
-      secondMaxSoFar = maxSoFar;
-      maxSoFar = number;
-    } else if (number > secondMaxSoFar) {
-      secondMaxSoFar = number;
-    }
-  }
+  list_of_numbers.each do |number|
+    if number > max_so_far
+      second_max_so_far = max_so_far
+      max_so_far = number
+    elsif number > second_max_so_far
+      second_max_so_far = number
+    end
+  end
 
-  return secondMaxSoFar;
-}
+  return second_max_so_far
+end
 
-let pile = [56, 10, 15, 109, 88];
-let result = findSecondLargestNumber(pile);
+pile = [56, 10, 15, 109, 88]
+result = find_second_largest_number(pile)
 
-console.log(result);
+puts(result)
 
 ```

@@ -31,43 +31,40 @@ console.log(smallestNumber);
 ## Python
 
 ```javascript
-function findSmallestNumber(numbers) {
-  let minSoFar = numbers[0];
+def find_smallest_number(numbers):
+  min_so_far = numbers[0]
 
-  for(let number of numbers) {
-    if (number < minSoFar) {
-      minSoFar = number;
-    }
-  }
+  for number in numbers:
+    if number < min_so_far:
+      min_so_far = number
 
-  return minSoFar;
-}
+  return min_so_far
 
-let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
-let smallestNumber = findSmallestNumber(pileOfNumbers);
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
 
-console.log(smallestNumber);
+print(smallest_number)
 
 ```
 
 ## Ruby
 
 ```javascript
-function findSmallestNumber(numbers) {
-  let minSoFar = numbers[0];
+def find_smallest_number(numbers)
+  min_so_far = numbers.first
 
-  for(let number of numbers) {
-    if (number < minSoFar) {
-      minSoFar = number;
-    }
-  }
+  numbers.each do |number|
+    if number < min_so_far
+      min_so_far = number
+    end
+  end
 
-  return minSoFar;
-}
+  return min_so_far
+end
 
-let pileOfNumbers = [1, 4, 10, 9, -3, 20, 18];
-let smallestNumber = findSmallestNumber(pileOfNumbers);
+pile_of_numbers = [1, 4, 10, 9, -3, 20, 18]
+smallest_number = find_smallest_number(pile_of_numbers)
 
-console.log(smallestNumber);
+puts(smallest_number)
 
 ```
