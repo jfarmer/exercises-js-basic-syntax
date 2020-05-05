@@ -4,6 +4,7 @@
   "description": "## Table of Contents <!-- omit in toc -->",
   "main": "index.js",
   "scripts": {
+    "generate": "node scripts/generate-exercises.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
