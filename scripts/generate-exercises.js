@@ -1,16 +1,16 @@
-const process = require('process');
-const fs = require('fs');
-const toml = require('toml');
-const path = require('path');
+let process = require('process');
+let fs = require('fs');
+let toml = require('toml');
+let path = require('path');
 
-const Handlebars = require('handlebars');
+let Handlebars = require('handlebars');
 
 async function readFile(filename) {
   return fs.promises.readFile(filename, 'utf8');
 }
 
 async function parseTomlFile(filename) {
-  const fileContents = await readFile(filename, 'utf8');
+  let fileContents = await readFile(filename, 'utf8');
   return toml.parse(fileContents);
 }
 
@@ -19,16 +19,16 @@ async function compileTemplate(templateFilename) {
 }
 
 async function main(templateDir, exerciseDataFilename) {
-  const templates = await getTemplates(templateDir);
-  const templateData = await parseTomlFile(exerciseDataFilename);
+  let templates = await getTemplates(templateDir);
+  let templateData = await parseTomlFile(exerciseDataFilename);
 
-  for(let exercise of templateData['exercises']) {
-    const exerciseDir = path.join('exercises', exercise['slug']);
+  for (let exercise of templateData.exercises) {
+    let exerciseDir = path.join('exercises', exercise.slug);
 
     await fs.promises.mkdir(exerciseDir, { recursive: true });
 
-    for(let [filename, template] of templates) {
-      const fullPath = path.join(exerciseDir, filename);
+    for (let [filename, template] of templates) {
+      let fullPath = path.join(exerciseDir, filename);
 
       await fs.promises.writeFile(fullPath, template(exercise), 'utf8');
     }
@@ -36,12 +36,12 @@ async function main(templateDir, exerciseDataFilename) {
 }
 
 async function getTemplates(templateDir) {
-  const templateFiles = await getTemplateFiles(templateDir);
+  let templateFiles = await getTemplateFiles(templateDir);
 
   return templateFiles.reduce(async (promise, filename) => {
-    const map = await promise;
-    const templateFilename = path.join(templateDir, filename);
-    const template = await compileTemplate(templateFilename);
+    let map = await promise;
+    let templateFilename = path.join(templateDir, filename);
+    let template = await compileTemplate(templateFilename);
 
     return map.set(templateBasename(templateFilename), template);
   }, Promise.resolve(new Map()));
@@ -57,11 +57,11 @@ function templateBasename(templateFilename) {
 
 if (process.argv.length < 4) {
   console.error('Missing exercises data and/or template directory.');
-  console.error('Usage: node generate-exercises.js <template> <exercises>')
+  console.error('Usage: node generate-exercises.js <template> <exercises>');
   process.exit(1);
 }
 
-const templateDir = process.argv[2];
-const exerciseDataFilename = process.argv[3];
+let templateDir = process.argv[2];
+let exerciseDataFilename = process.argv[3];
 
 main(templateDir, exerciseDataFilename);
