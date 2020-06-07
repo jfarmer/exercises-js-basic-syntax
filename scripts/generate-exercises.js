@@ -38,7 +38,7 @@ async function main(templateDir, exerciseDataFilename) {
 async function getTemplates(templateDir) {
   let templateFiles = await getTemplateFiles(templateDir);
 
-  return templateFiles.reduce(async (promise, filename) => {
+  return templateFiles.reduce(async(promise, filename) => {
     let map = await promise;
     let templateFilename = path.join(templateDir, filename);
     let template = await compileTemplate(templateFilename);
