@@ -9,10 +9,10 @@
 ## JavaScript
 
 ```javascript
-function findLargestNumber(numbers) {
-  let maxSoFar = numbers[0];
+function findLargestNumber(pile) {
+  let maxSoFar = pile[0];
 
-  for(let number of numbers) {
+  for(let number of pile) {
     if (number > maxSoFar) {
       maxSoFar = number;
     }
