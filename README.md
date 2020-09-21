@@ -125,6 +125,8 @@ Using those heuristics, you might find a likely candidate for "largest number" a
 
 That's too smart for a computer!
 
+So, let's start practicing with [the exerises](#the-exercises).
+
 [wiki-mental-model]: https://en.wikipedia.org/wiki/Mental_model
 [wiki-index-cards]: https://en.wikipedia.org/wiki/Index_card
 [wiki-sticky-notes]: https://en.wikipedia.org/wiki/Post-it_Note
