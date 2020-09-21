@@ -67,6 +67,8 @@ Equivalently:
 
 - If you don't know what code to write then your mental model isn't as clear as you think it is or you don't have sufficient knowledge of syntax (likely a combination of both).
 
+So, remember: novices focus too much on syntax and not enough on modeling. This is understandable since syntax is new, foreign, and unique to programming. Most curriculum reinforces this by organizing everything by syntax.
+
 
 ## Exercise Goals
 
