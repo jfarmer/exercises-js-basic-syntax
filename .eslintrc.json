@@ -1,13 +1,19 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jquery": true
   },
   "extends": [
+    "plugin:json/recommended",
     "eslint:recommended",
     "standard"
+  ],
+  "ignorePatterns": [
+    "docs/*"
   ],
   "globals": {
     "Atomics": "readonly",
