@@ -35,7 +35,7 @@ console.log(`Count of 109 is #{countOf109}`);
 ## Python
 
 ```javascript
-def count_number(list, number_to_count)
+def count_number(list, number_to_count):
   count_so_far = 0
 
   for number in list:
